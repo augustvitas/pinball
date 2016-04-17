@@ -20,30 +20,28 @@ light_player:
     script: flash
     tocks_per_sec: 8
     repeat: yes
-#  switch_active:
-#    leds: l_led0, l_led1
-#    script: flash
-#    tocks_per_sec: 8
-#    repeat: yes
-#  switch_inactive:
-#    leds: l_led0, l_led1
-#    script: off
-#    tocks_per_sec: 8
-#    repeat: yes
+  pew_active:
+    leds: l_led0, l_led1
+    script: steady_on
+    tocks_per_sec: 8
+    repeat: yes
+  pew_inactive:
+    leds: l_led0, l_led1
+    script: steady_off
+    tocks_per_sec: 8
+    repeat: yes
 light_scripts:
   flash:
     - tocks: 1
       color: ffffff
     - tocks: 1
       color: 0
-  on:
+  steady_on:
     - tocks: 1
       color: ffffff
-  off:
+  steady_off:
     - tocks: 1
       color: 000000
 switches:
   pew:
     number: 23
-#    activation_events: switch_active
-#    deactivation_events: switch_inactive
