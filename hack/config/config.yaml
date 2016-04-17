@@ -2,6 +2,10 @@
 hardware:
   platform: p3_roc
   driverboards: pdb
+mpf:
+  auto_create_switch_events: True
+  switch_event_active: "%active"
+  switch_event_inactive: "%inactive"
 leds:
   l_led0:
     number: 0-0-2-3
@@ -19,31 +23,44 @@ light_player:
     leds: l_led0, l_led1
     script: flash
     tocks_per_sec: 8
+    key: sw_moo
     repeat: yes
-#  switch_active:
+  sw_moo:
+    key: sw_moo
+    action: stop
+#  sw_moo:
 #    leds: l_led0, l_led1
-#    script: flash
-#    tocks_per_sec: 8
-#    repeat: yes
-#  switch_inactive:
-#    leds: l_led0, l_led1
-#    script: off
-#    tocks_per_sec: 8
-#    repeat: yes
+#    script: steady
+#    tocks_per_sec: 1
+#    repeat: no
+  pew_active:
+    leds: l_led0, l_led1
+    script: steady
+    tocks_per_sec: 8
+    repeat: yes
+#    key: sw_moo
+  pew_inactive:
+    leds: l_led0, l_led1
+    script: off_mode
+    tocks_per_sec: 8
+    repeat: yes
+    key: sw_moo
 light_scripts:
   flash:
     - tocks: 1
       color: ffffff
     - tocks: 1
       color: 0
-  on:
+  steady:
     - tocks: 1
       color: ffffff
-  off:
+  off_mode:
     - tocks: 1
       color: 000000
 switches:
   pew:
     number: 23
-#    activation_events: switch_active
-#    deactivation_events: switch_inactive
+    label:
+    tags: moo
+#    activation_events: Amoo_start
+#    deactivation_events: Amoo_end
