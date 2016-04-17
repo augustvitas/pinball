@@ -1,0 +1,9 @@
+#config_version=3
+- tocks: 1
+  leds:
+    l_led0: 000000
+    l_led1: FFFFFF
+- tocks: 1
+  leds:
+    l_led0: FFFFFF
+    l_led1: 000000

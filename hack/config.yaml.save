@@ -1,0 +1,36 @@
+#config_version=3
+hardware:
+  platform: p3_roc
+  driverboards: pdb
+leds:
+  l_led0:
+    number: 0-0-2-3
+    brightness_compensation: 0.9
+    tags: playfield
+    fade_ms: 100
+    polarity: true
+  l_led1:
+    number: 0-1-4-5
+    brightness_compensation: 0.9
+    tags: playfield
+    polarity: true
+light_player:
+  mode_attract_started:
+    leds: l_led0
+    script: flash
+    tocks_per_sec: 4
+    repeat: yes
+
+light_scripts:
+  flash:
+    - tocks: 1
+      color: ffffff
+    - tocks: 1
+      color: 0
+  on:
+    - tocks: 1
+      color: ffffff
+
+switches:
+  pew:
+    number: 0/7
