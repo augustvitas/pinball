@@ -25,7 +25,6 @@ light_player:
     tocks_per_sec: 8
     key: sw_moo
     repeat: yes
-<<<<<<< HEAD
   sw_moo:
     key: sw_moo
     action: stop
@@ -46,44 +45,22 @@ light_player:
     tocks_per_sec: 8
     repeat: yes
     key: sw_moo
-=======
-  pew_active:
-    leds: l_led0, l_led1
-    script: steady_on
-    tocks_per_sec: 8
-    repeat: yes
-  pew_inactive:
-    leds: l_led0, l_led1
-    script: steady_off
-    tocks_per_sec: 8
-    repeat: yes
->>>>>>> 4fe8928dda4a4d66e15eefdc81271519bcc247dd
 light_scripts:
   flash:
     - tocks: 1
       color: ffffff
     - tocks: 1
       color: 0
-<<<<<<< HEAD
   steady:
     - tocks: 1
       color: ffffff
   off_mode:
-=======
-  steady_on:
-    - tocks: 1
-      color: ffffff
-  steady_off:
->>>>>>> 4fe8928dda4a4d66e15eefdc81271519bcc247dd
     - tocks: 1
       color: 000000
 switches:
   pew:
     number: 23
-<<<<<<< HEAD
     label:
     tags: moo
 #    activation_events: Amoo_start
 #    deactivation_events: Amoo_end
-=======
->>>>>>> 4fe8928dda4a4d66e15eefdc81271519bcc247dd
