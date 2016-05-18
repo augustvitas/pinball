@@ -64,3 +64,12 @@ switches:
     tags: moo
 #    activation_events: Amoo_start
 #    deactivation_events: Amoo_end
+Coils:
+  flipperLeftMain:
+    number: 0
+    pulse_ms: 20
+    hold_power: 2
+Flippers:
+  leftFlipper:
+    main_coil: flipperLeftMain
+    activation_switch: pew
