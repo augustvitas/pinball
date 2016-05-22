@@ -28,17 +28,11 @@ light_player:
   sw_moo:
     key: sw_moo
     action: stop
-#  sw_moo:
-#    leds: l_led0, l_led1
-#    script: steady
-#    tocks_per_sec: 1
-#    repeat: no
   pew_active:
     leds: l_led0, l_led1
     script: steady
     tocks_per_sec: 8
     repeat: yes
-#    key: sw_moo
   pew_inactive:
     leds: l_led0, l_led1
     script: off_mode
@@ -62,14 +56,13 @@ switches:
     number: 23
     label:
     tags: moo
-#    activation_events: Amoo_start
-#    deactivation_events: Amoo_end
-Coils:
+coils:
   flipperLeftMain:
     number: A0-B0-0
     pulse_ms: 20
-    hold_power: 2
-Flippers:
+    hold_power: 1
+flippers:
   leftFlipper:
     main_coil: flipperLeftMain
     activation_switch: pew
+    enable_events: machine_reset_phase_3
