@@ -1,4 +1,4 @@
-#config_version=3
+#config_version=4
 hardware:
   platform: p3_roc
   driverboards: pdb
@@ -18,13 +18,13 @@ leds:
     brightness_compensation: 0.9
     tags: playfield
     polarity: true
-light_player:
-  mode_attract_started:
-    leds: l_led0, l_led1
-    script: flash
-    tocks_per_sec: 8
-    key: sw_moo
-    repeat: yes
+#light_player:
+#  mode_attract_started:
+#    leds: l_led0, l_led1
+#    script: flash
+#    tocks_per_sec: 8
+#    key: sw_moo
+#    repeat: yes
   sw_moo:
     key: sw_moo
     action: stop
@@ -39,18 +39,18 @@ light_player:
     tocks_per_sec: 8
     repeat: yes
     key: sw_moo
-light_scripts:
-  flash:
-    - tocks: 1
-      color: ffffff
-    - tocks: 1
-      color: 0
-  steady:
-    - tocks: 1
-      color: ffffff
-  off_mode:
-    - tocks: 1
-      color: 000000
+#light_scripts:
+#  flash:
+#    - tocks: 1
+#      color: ffffff
+#    - tocks: 1
+#      color: 0
+#  steady:
+#    - tocks: 1
+#      color: ffffff
+#  off_mode:
+#    - tocks: 1
+#      color: 000000
 switches:
   pew:
     number: 23
