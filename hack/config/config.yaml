@@ -52,19 +52,56 @@ mpf:
 #    - tocks: 1
 #      color: 000000
 switches:
-  pew:
+  s_left_button:
     number: 23
     label:
-    tags: moo
+    tags: flip_sw_l
+  s_right_button:
+    number: 22
+    label:
+    tags: flip_sw_r
+  s_left_slingshot:
+    number: 21
+    label:
+    tags: slingshot_sw_l
+  s_right_slingshot:
+    number: 20
+    label:
+    tags: slingshot_sw_r
 coils:
-  flipperLeftMain:
+  c_flipperLeftMain:
     number: A0-B0-0
+    pulse_ms: 20
+    hold_power: 1
+  c_flipperRightMain:
+    number: A0-B0-1
+    pulse_ms: 20
+    hold_power: 1
+  c_slingshotLeftMain:
+    number: A0-B0-3
+    pulse_ms: 20
+    hold_power: 1
+  c_slingshotRightMain:
+    number: A0-B0-2
     pulse_ms: 20
     hold_power: 1
 flippers:
   leftflipper:
-    main_coil: flipperLeftMain
-    activation_switch: pew
+    main_coil: c_flipperLeftMain
+    activation_switch: s_left_button
+    enable_events: machine_reset_phase_3
+  rightflipper:
+    main_coil: c_flipperRightMain
+    activation_switch: s_right_button
+    enable_events: machine_reset_phase_3
+autofire_coils:
+  leftslingshot:
+    coil: c_slingshotLeftMain
+    switch: s_left_slingshot
+    enable_events: machine_reset_phase_3
+  rightslingshot:
+    coil: c_slingshotRightMain
+    switch: s_right_slingshot
     enable_events: machine_reset_phase_3
 widget_styles:
   default:
