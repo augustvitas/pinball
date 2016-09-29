@@ -3,21 +3,21 @@ hardware:
   platform: p3_roc
   driverboards: pdb
 mpf:
-  auto_create_switch_events: True
-  switch_event_active: "%active"
-  switch_event_inactive: "%inactive"
-leds:
-  l_led0:
-    number: 0-0-2-3
-    brightness_compensation: 0.9
-    tags: playfield
-    fade_ms: 100
-    polarity: true
-  l_led1:
-    number: 0-1-4-5
-    brightness_compensation: 0.9
-    tags: playfield
-    polarity: true
+  auto_create_switch_events: true
+  switch_event_active: '%active'
+  switch_event_inactive: '%inactive'
+#leds:
+#  l_led0:
+#    number: 0-0-2-3
+#    brightness_compensation: 0.9
+#    tags: playfield
+#    fade_ms: 100
+#    polarity: true
+#  l_led1:
+#    number: 0-1-4-5
+#    brightness_compensation: 0.9
+#    tags: playfield
+#    polarity: true
 #light_player:
 #  mode_attract_started:
 #    leds: l_led0, l_led1
@@ -25,20 +25,20 @@ leds:
 #    tocks_per_sec: 8
 #    key: sw_moo
 #    repeat: yes
-  sw_moo:
-    key: sw_moo
-    action: stop
-  pew_active:
-    leds: l_led0, l_led1
-    script: steady
-    tocks_per_sec: 8
-    repeat: yes
-  pew_inactive:
-    leds: l_led0, l_led1
-    script: off_mode
-    tocks_per_sec: 8
-    repeat: yes
-    key: sw_moo
+#  sw_moo:
+#    key: sw_moo
+#    action: stop
+#  pew_active:
+#    leds: l_led0, l_led1
+#    script: steady
+#    speed: 8
+#    loops: true
+#  pew_inactive:
+#    leds: l_led0, l_led1
+#    script: off_mode
+#    speed: 8
+#    loops: true
+#    key: sw_moo
 #light_scripts:
 #  flash:
 #    - tocks: 1
@@ -62,7 +62,38 @@ coils:
     pulse_ms: 20
     hold_power: 1
 flippers:
-  leftFlipper:
+  leftflipper:
     main_coil: flipperLeftMain
     activation_switch: pew
     enable_events: machine_reset_phase_3
+widget_styles:
+  default:
+    font_name: Quadrit
+    font_size: 10
+    adjust_top: 2
+    adjust_bottom: 3
+  space title huge:
+    font_name: DEADJIM
+    font_size: 29
+    antialias: true
+    adjust_top: 3
+    adjust_bottom: 3
+  space title:
+    font_name: DEADJIM
+    font_size: 21
+    antialias: true
+    adjust_top: 2
+    adjust_bottom: 3
+  medium:
+    font_name: pixelmix
+    font_size: 8
+    adjust_top: 1
+    adjust_bottom: 1
+  small:
+    font_name: smallest_pixel-7
+    font_size: 9
+    adjust_top: 2
+    adjust_bottom: 3
+  tall title:
+    font_name: big_noodle_titling
+    font_size: 20
