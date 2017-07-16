@@ -89,6 +89,10 @@ coils:
     number: A0-B0-2
     pulse_ms: 20
     hold_power: 1
+  c_popBumper1:
+    number: A0-B0-4
+    pulse_ms: 20
+    hold_power: 1
 flippers:
   leftflipper:
     main_coil: c_flipperLeftMain
@@ -106,6 +110,10 @@ autofire_coils:
   rightslingshot:
     coil: c_slingshotRightMain
     switch: s_right_slingshot
+    enable_events: machine_reset_phase_3
+  popbumper1:
+    coil: c_popBumper1
+    switch: s_start_button
     enable_events: machine_reset_phase_3
 widget_styles:
   default:
