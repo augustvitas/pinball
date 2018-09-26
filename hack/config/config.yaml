@@ -1,4 +1,4 @@
-#config_version=4
+#config_version=5
 hardware:
   platform: p3_roc
   driverboards: pdb
@@ -6,6 +6,10 @@ mpf:
   auto_create_switch_events: true
   switch_event_active: '%active'
   switch_event_inactive: '%inactive'
+playfields:
+  playfield:
+    default_source_device: bd_plunger
+    tags: default
 #leds:
 #  l_led0:
 #    number: 0-0-2-3
@@ -99,35 +103,35 @@ switches:
 coils:
   c_flipperLeftMain:
     number: A0-B0-0
-    pulse_ms: 20
-    hold_power: 1
+    default_pulse_ms: 20
+    default_hold_power: .125
   c_flipperRightMain:
     number: A0-B0-1
-    pulse_ms: 20
-    hold_power: 1
+    default_pulse_ms: 20
+    default_hold_power: .125
   c_slingshotLeftMain:
     number: A0-B0-3
-    pulse_ms: 20
-    hold_power: 1
+    default_pulse_ms: 20
+    default_hold_power: .125
   c_slingshotRightMain:
     number: A0-B0-2
-    pulse_ms: 20
-    hold_power: 1
+    default_pulse_ms: 20
+    default_hold_power: .125
   c_popBumper3:
     number: A0-B0-4
-    pulse_ms: 20
-    hold_power: 1
+    default_pulse_ms: 20
+    default_hold_power: .125
   c_popBumper2:
     number: A0-B0-7
-    pulse_ms: 20
-    hold_power: 1
+    default_pulse_ms: 20
+    default_hold_power: .125
   c_trough_eject:
     number: A0-B0-5
-    pulse_ms: 20
+    default_pulse_ms: 20
   c_popBumper1:
     number: A0-B0-6
-    pulse_ms: 20
-    hold_power: 1
+    default_pulse_ms: 20
+    default_hold_power: .125
 flippers:
   leftflipper:
     main_coil: c_flipperLeftMain
@@ -158,10 +162,10 @@ autofire_coils:
     coil: c_popBumper3
     switch: s_pop_bumper_3
     enable_events: machine_reset_phase_3
-  #ballTrough:
-  #  coil: c_trough_eject
-    #switch: s_start_button
-  #  enable_events: machine_reset_phase_3
+#  ballTrough:
+#    coil: c_trough_eject
+#    switch: s_start_button
+#    enable_events: machine_reset_phase_3
 ball_devices:
   bd_trough:
     #ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough_jam
