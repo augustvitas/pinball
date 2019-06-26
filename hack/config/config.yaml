@@ -10,6 +10,19 @@ playfields:
   playfield:
     default_source_device: bd_plunger
     tags: default
+lights:
+  l_light1:
+    channels:
+      white:
+        - number: 0-0
+  l_light2:
+    channels:
+      white:
+        - number: 0-1
+  l_light3:
+    channels:
+      white:
+        - number: 0-2
 #leds:
 #  l_led0:
 #    number: 0-0-2-3
@@ -136,11 +149,11 @@ flippers:
   leftflipper:
     main_coil: c_flipperLeftMain
     activation_switch: s_left_button
-    enable_events: machine_reset_phase_3
+#    enable_events: machine_reset_phase_3
   rightflipper:
     main_coil: c_flipperRightMain
     activation_switch: s_right_button
-    enable_events: machine_reset_phase_3
+#    enable_events: machine_reset_phase_3
 autofire_coils:
   leftslingshot:
     coil: c_slingshotLeftMain
@@ -216,3 +229,28 @@ modes:
     - base
 machine:
   balls_installed: 2
+slides:
+  welcome_slide:
+    widgets:
+      - type: text
+        text: PINBALL!
+        font_size: 50
+        color: red
+      - type: rectangle
+        width: 240
+        height: 60
+slide_player:
+  init_done: welcome_slide
+  ball_started:
+    widgets:
+      type: text
+      text: PLAYER (number) BALL (ball)
+
+window:
+  width: 1280
+  height: 800
+
+kivy_config:
+  graphics:
+    fbo: force-hardware
+

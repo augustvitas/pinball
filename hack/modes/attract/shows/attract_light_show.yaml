@@ -1,0 +1,17 @@
+#show_version=5
+- duration: 1
+  lights:
+    l_light2: 0
+    l_light1: ff
+- duration: 1
+  lights:
+    l_light1: 0
+    l_light2: ff
+- duration: 1
+  lights:
+    l_light2: 0
+    l_light3: ff
+- duration: 1
+  lights:
+    l_light3: 0
+    l_light2: ff
