@@ -97,6 +97,18 @@ switches:
     number: 17
     label:
     tags: pop_bumper_sw_3
+  s_inlane_left:
+    number: 31
+    label:
+    tags: playfield_active
+  s_outlane_left:
+    number: 30
+    label:
+    tags: playfield_active
+  s_outlane_right:
+    number: 16
+    label:
+    tags: playfield_active
   s_start_button:
     number: 24
     label:
@@ -112,7 +124,9 @@ switches:
   s_trough_jam:
     number: 29
   s_plunger_lane:
-    number: 30
+    number: 27
+    label:
+    tags:
 coils:
   c_flipperLeftMain:
     number: A0-B0-0
