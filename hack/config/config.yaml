@@ -105,6 +105,10 @@ switches:
     number: 30
     label:
     tags: playfield_active
+  s_inlane_right:
+    number: 32
+    label:
+    tags: playfield_active
   s_outlane_right:
     number: 16
     label:
@@ -117,14 +121,14 @@ switches:
     number: 25
   s_trough2:
     number: 26
-#  s_trough3:
-#    number: 27
-#  s_trough4:
-#    number: 28
+  s_trough3:
+    number: 27
+  s_trough4:
+    number: 28
   s_trough_jam:
     number: 29
   s_plunger_lane:
-    number: 27
+    number: 33
     label:
     tags:
 coils:
@@ -163,40 +167,32 @@ flippers:
   leftflipper:
     main_coil: c_flipperLeftMain
     activation_switch: s_left_button
-#    enable_events: machine_reset_phase_3
   rightflipper:
     main_coil: c_flipperRightMain
     activation_switch: s_right_button
-#    enable_events: machine_reset_phase_3
 autofire_coils:
   leftslingshot:
     coil: c_slingshotLeftMain
     switch: s_left_slingshot
-    enable_events: machine_reset_phase_3
   rightslingshot:
     coil: c_slingshotRightMain
     switch: s_right_slingshot
-    enable_events: machine_reset_phase_3
   popbumper1:
     coil: c_popBumper1
     switch: s_pop_bumper_1
-    enable_events: machine_reset_phase_3
   popbumper2:
     coil: c_popBumper2
     switch: s_pop_bumper_2
-    enable_events: machine_reset_phase_3
   popbumper3:
     coil: c_popBumper3
     switch: s_pop_bumper_3
-    enable_events: machine_reset_phase_3
 #  ballTrough:
 #    coil: c_trough_eject
 #    switch: s_start_button
-#    enable_events: machine_reset_phase_3
 ball_devices:
   bd_trough:
-    #ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough_jam
-    ball_switches: s_trough1, s_trough2, s_trough_jam
+    ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough_jam
+    #ball_switches: s_trough1, s_trough2, s_trough_jam
     eject_coil: c_trough_eject
 #    tags: trough, home, drain, ball_add_live
     tags: trough, home, drain
@@ -242,7 +238,7 @@ widget_styles:
 modes:
     - base
 machine:
-  balls_installed: 2
+  balls_installed: 3
 slides:
   welcome_slide:
     widgets:
